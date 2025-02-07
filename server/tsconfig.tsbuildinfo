@@ -1,0 +1,1 @@
+{"root":["./src/index.ts","./src/controllers/processpdf.ts","./src/controllers/removedirectory.ts","./src/controllers/saveipfsurl.ts","./src/controllers/uploadfiletoipfs.ts","./src/middleware/fileparser.ts","./src/routes/ipfsurlfromclient.ts","./src/routes/issuedocument.ts"],"version":"5.7.2"}
