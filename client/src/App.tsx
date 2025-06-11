@@ -2,7 +2,9 @@ import './App.css'
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from './views/Home';
-import IssueDoc from './views/IssueDoc';
+import RegisterPage from './views/RegisterPage';
+import IssueDoc from './views/issuer/IssueDoc';
+import LoginPage from './views/Login';
 const App:React.FC=()=> {
   return (
     <Router>
@@ -10,6 +12,14 @@ const App:React.FC=()=> {
         <Route
         path='/'
         element={<Home/>}
+        />
+        <Route
+        path='/register'
+        element={<RegisterPage/>}
+        />
+        <Route
+        path='/login'
+        element={<LoginPage/>}
         />
         <Route
         path='/issue-doc'

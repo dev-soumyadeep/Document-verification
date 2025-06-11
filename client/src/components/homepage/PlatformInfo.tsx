@@ -2,7 +2,7 @@ import React from 'react'
 import issuer from "../../assets/issuer.png"
 import holder from "../../assets/holder.png"
 import verifier from "../../assets/verifier.png"
-const PlatformInfo = () => {
+const PlatformInfo:React.FC = () => {
   return (
     <div className='flex flex-col justify-center items-center w-full gap-4 py-8'>
       <div className='grid grid-cols-1 w-5/6 border rounded-lg  xl:grid-cols-2 items-center gap-6'>
