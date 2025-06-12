@@ -1,5 +1,5 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { User } from '../../types/User'; 
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { User } from "../../types/User";
 interface AuthState {
   isAuthenticated: boolean;
   user: User | null;
@@ -8,14 +8,14 @@ interface AuthState {
 }
 
 const initialState: AuthState = {
-  isAuthenticated: false,
+  isAuthenticated: true,
   user: null,
   error: null,
   loading: false,
 };
 
 const authSlice = createSlice({
-  name: 'auth',
+  name: "auth",
   initialState,
   reducers: {
     loginStart: (state) => {
@@ -44,22 +44,15 @@ const authSlice = createSlice({
   },
 });
 
-export const { 
-  loginStart, 
-  loginSuccess, 
-  loginFailure, 
-  logout, 
-  clearError 
-} = authSlice.actions;
+export const { loginStart, loginSuccess, loginFailure, logout, clearError } =
+  authSlice.actions;
 
 export default authSlice.reducer;
 
 // Selectors
-export const selectIsAuthenticated = (state: { auth: AuthState }) => 
+export const selectIsAuthenticated = (state: { auth: AuthState }) =>
   state.auth.isAuthenticated;
-export const selectUser = (state: { auth: AuthState }) => 
-  state.auth.user;
-export const selectAuthError = (state: { auth: AuthState }) => 
-  state.auth.error;
-export const selectAuthLoading = (state: { auth: AuthState }) => 
+export const selectUser = (state: { auth: AuthState }) => state.auth.user;
+export const selectAuthError = (state: { auth: AuthState }) => state.auth.error;
+export const selectAuthLoading = (state: { auth: AuthState }) =>
   state.auth.loading;

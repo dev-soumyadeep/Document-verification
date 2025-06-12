@@ -1,13 +1,19 @@
-import React from 'react';
-import Sidebar from '../../components/utils/SideBar';
-import IssueForm from '../../components/issuepage/IssueForm';
-import { Description, Dashboard, Search} from '@mui/icons-material';
+import React from "react";
+import Sidebar from "../../components/utils/SideBar";
+import IssueForm from "../../components/issuepage/IssueForm";
+import {
+  Description,
+  Dashboard,
+  VerifiedUser,
+  History,
+} from "@mui/icons-material";
 
 const IssueDoc: React.FC = () => {
   const sidebarOptions = [
-    { path: '/dashboard-issuer/:id', label: 'Dashboard', icon: <Dashboard /> },
-    { path: '/issue-doc', label: 'Issue', icon: <Description /> },
-    { path: '/verify', label: 'Verify', icon: <Search /> },
+    { path: "/dashboard/123", label: "Dashboard", icon: <Dashboard /> },
+    { path: "/issue/history/123", label: "History", icon: <History /> },
+    { path: "/issue-doc", label: "Issue", icon: <Description /> },
+    { path: "/verify", label: "Verify", icon: <VerifiedUser /> },
   ];
 
   return (
@@ -23,7 +29,8 @@ const IssueDoc: React.FC = () => {
               Issue Document
             </h1>
             <p className="text-gray-400 mt-1">
-              Fill in the details below to issue a new document on the blockchain.
+              Fill in the details below to issue a new document on the
+              blockchain.
             </p>
           </header>
 

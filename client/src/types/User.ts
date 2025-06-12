@@ -1,7 +1,8 @@
-export type UserRole = 'ISSUER' | 'HOLDER' | 'VALIDATOR' | 'STAKER';
+export type UserRole = "ISSUER" | "HOLDER" | "VALIDATOR" | "STAKER";
 
 export interface User {
-    name: string;
-    role: UserRole;
-    email: string;
+  name: string;
+  type: "individual" | "organization";
+  role: UserRole;
+  email: string;
 }
